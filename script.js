@@ -4,6 +4,7 @@ function mouse_position() {
   var stuff = document.getElementById('mover');
   let left = e.pageX - 37.5;
   let top = e.pageY - 37.5;
+  stuff.style.visibility = 'visible';
   stuff.style.left = left + 'px';
   stuff.style.top = top + 'px';
 }

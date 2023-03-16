@@ -1,24 +1,60 @@
 #wrapper {
   height: 100%;
   width: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   position: absolute;
   margin: 0%;
   overflow: hidden;
   background: radial-gradient(
-      circle at top right,
-      #be0000,
-      #0a0000 20%,
-      #000000 80%
+      circle at bottom center,
+      #8f0000,
+      #0a0000 40%,
+      #000000 100%
     ),
     #000000;
 }
 
+#grid {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  margin: 0%;
+  overflow: hidden;
+  background-image: linear-gradient(
+      rgba(41, 41, 41, 0.2) 0.1em,
+      transparent 0.1em
+    ),
+    linear-gradient(90deg, rgba(41, 41, 41, 0.2) 0.1em, transparent 0.1em);
+  background-size: 2em 2em;
+}
+
+@keyframes breath {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 250%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
 #mover {
   position: absolute;
+  visibility: hidden;
   width: 75px;
   height: 75px;
   filter: blur(25px);
-  background: radial-gradient(circle, #a10000, rgba(0, 0, 0, 0) 75%);
+  background: radial-gradient(circle, #720000, rgba(0, 0, 0, 0) 75%);
+  animation: breath 5s infinite;
 }
 
 * {
@@ -29,17 +65,6 @@
 h1 {
   padding: 0;
   margin: 0;
-}
-
-#content {
-  backdrop-filter: blur(5px);
-  /* background-color: rgba(0, 0, 0, 0.2); */
-  border-radius: 10px;
-  text-justify: newspaper;
-  padding: 5px;
-  color: white;
-  margin: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
   overflow: hidden;
